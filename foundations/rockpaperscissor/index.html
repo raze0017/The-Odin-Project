@@ -1,58 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rockpaperscissor</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="image">
+      <div class="imagecontainer">
+        <div class="container" >
+        <button class="rock"><div class="rock1">ROCK</div></button>
+        <button class="paper">PAPER</button>
+        <button class="scissor">SCISSOR</button>
+      </div>
+      </div>
+    </div> 
+    <div class="result"></div>
+    <div class="score">
+      <div>Player: <span id="playerScore">0</span></div>
+      <div>Computer: <span id="computerScore">0</span></div>
+    </div>
     <script>
-        let count1=0;
-        let count2=0;
-        function random(){
-            randomnumber=Math.floor(Math.random()*3);
-            switch(randomnumber){
-                case 0:
-                    return "rock";
-                case 1:
-                    return "paper";
-                case 2:
-                    return "scissor"        
-            }
-            
+      const rock = document.querySelector(".rock");
+      rock.addEventListener("click", function () {
+        round("rock");
+      });
+      const paper=document.querySelector(".paper");
+      paper.addEventListener('click',function(){
+        round("paper");
+      });
+      const scissor=document.querySelector(".scissor");
+      scissor.addEventListener('click',function(){
+        round("scissor");
+      });
+
+      let playerScore = 0;
+      let computerScore = 0;
+
+      function random() {
+        randomnumber = Math.floor(Math.random() * 3);
+        switch (randomnumber) {
+          case 0:
+            return "rock";
+          case 1:
+            return "paper";
+          case 2:
+            return "scissor";
         }
-        function round(playerselection,computerselection){
-            if ((playerselection=="rock" && computerselection=="scissor")|| (playerselection=="paper" && computerselection=="rock")|| (playerselection=="scissor" && computerselection=="paper")){
-                console.log("Congrats yo win");
-                count1=count1+1
-            }else if(playerselection==computerselection){
-                console.log("Tie");
-            }
-            else{
-                console.log("u lost cause,"+computerselection + " always beats "+playerselection);
-                count2=count2+1;
-            }
-        }
-        function game(){
-            for(let i=0;i<5;i++){
-                computerselection=random();
-                playerselection=prompt(console.log("Enter choice rock,paper or scissor"))
-                playerselection=playerselection.toLowerCase();
-                round(playerselection,computerselection);
-            }
+      }
+
+      function round(playerselection) {
+        const computerselection = random();
+        const resultdiv=document.createElement('div');
+        const computerdiv=document.createElement('div');
+        resultdiv.classList.add("result");
+        computerdiv.classList.add("resultcomp");
+        computerdiv.textContent = "Computer selected: " + computerselection;
+        document.body.appendChild(computerdiv);
+        if (
+          (playerselection == "rock" && computerselection == "scissor") ||
+          (playerselection == "paper" && computerselection == "rock") ||
+          (playerselection == "scissor" && computerselection == "paper")
+        ) {
+          resultdiv.textContent='You win'
+          document.body.appendChild(resultdiv);
+          playerScore++;
+        } else if (playerselection == computerselection) {
+          resultdiv.textContent='tie'
+          document.body.appendChild(resultdiv);
+        } else {
+          resultdiv.textContent="You lost cause, " +computerselection +" always beats " +playerselection;
+          document.body.appendChild(resultdiv);
+          computerScore++;
         }
 
-        game();
-        if(count1>count2){
-            console.log("You Win the match");
-        }
-        else if(count1==count2){
-            console.log("Match tied");
+        // Update score
+        const playerScoreDiv = document.querySelector("#playerScore");
+        const computerScoreDiv = document.querySelector("#computerScore");
+        playerScoreDiv.textContent = playerScore;
+        computerScoreDiv.textContent = computerScore;
+
+        // Check for winner
+        if ((playerScore==5)||(computerScore==5)) {
+          checkWinner();
         }
         else{
-            console.log("You lost the match");
+          setTimeout(() => {
+            document.querySelectorAll(".result").forEach((el) => el.remove());
+            document.querySelectorAll(".resultcomp").forEach((el) => el.remove()); 
+          }, 1000);
         }
+      }
+
+
+      function checkWinner() {
+  if (playerScore > computerScore) {
+    const matchdiv=document.createElement('div');
+    matchdiv.classList.add('resultMain');
+    matchdiv.textContent='Match end\n You won';
+    document.body.append(matchdiv);
+  } 
+  else {
+    const matchdiv=document.createElement('div');
+    matchdiv.classList.add('resultMain');
+    matchdiv.textContent='Match end\n You Lost';
+    document.body.append(matchdiv);
+  }
+}
     </script>
-</body>
+  </body>
 </html>

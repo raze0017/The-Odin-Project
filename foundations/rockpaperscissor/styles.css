@@ -1,0 +1,81 @@
+body{
+    background-image: url('1471494.png');
+    background-size: cover;
+}
+button, .score {
+    color: white;
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    background:none;
+    bottom: 400px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 200px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.rock{
+    display: flex;
+    margin-left: 15px;
+    width: 150px;
+    height:100px;
+    font-size: 25px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    align-items: center;
+    border: 2px solid black;
+
+}
+.paper{
+    display: flex;
+    margin-left: 15px;
+    width: 150px;
+    height:100px;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    align-items: center;
+    border: 2px solid white;
+    
+}
+.scissor{
+    display: flex;
+    margin-left: 15px;
+    width: 150px;
+    height:100px;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    align-items: center;
+    border: 2px solid blue;
+}
+.resultcomp {
+    position: fixed;
+    bottom: 250px;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(7, 53, 24);
+  }
+.result {
+    position: fixed;
+    bottom: 200px;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(6, 47, 12);
+  }
+  .resultMain{
+    position: fixed;
+    bottom: 150px;
+    width: 100%;
+    font-family: monospace;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+  }
