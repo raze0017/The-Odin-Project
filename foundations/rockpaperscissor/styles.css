@@ -60,7 +60,7 @@ button, .score {
     width: 100%;
     text-align: center;
     font-size: 2rem;
-    color: rgb(7, 53, 24);
+    color: rgb(244, 248, 246);
   }
 .result {
     position: fixed;
@@ -68,7 +68,7 @@ button, .score {
     width: 100%;
     text-align: center;
     font-size: 2rem;
-    color: rgb(6, 47, 12);
+    color: rgb(227, 236, 229);
   }
   .resultMain{
     position: fixed;
