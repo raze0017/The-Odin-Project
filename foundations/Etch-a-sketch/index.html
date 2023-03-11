@@ -22,13 +22,16 @@
   <script>
     const gridContainer = document.querySelector('.grid-container');
 
-    for (let i = 0; i < 15; i++) {
-      for (let j = 0; j < 17; j++) {
+    for (let i = 0; i < 14; i++) {
+      for (let j = 0; j < 10; j++) {
         const gridCell = document.createElement('div');
         gridCell.classList.add('grid-cell');
         gridContainer.appendChild(gridCell);
-        gridCell.addEventListener('mouseenter',()
-        => console.log('mouseentered'));
+        gridCell.addEventListener('mouseenter',() => {
+            
+            
+      });
+       
       }
     }
 </script>

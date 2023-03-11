@@ -1,5 +1,7 @@
 body{
     background-color: rgb(109, 88, 88);
+        margin: 0;
+        padding: 0;
 }
 .headingcontainer{
     display: flex;
@@ -17,16 +19,23 @@ body{
     text-align: center;
     align-items: center;
 }
-.grid-container{
-    margin-left: 300px;
-    border: 10px solid blue;
-    padding: 20px;
+.containers{
+    margin: 0;
+    padding: 0;
+    width: 720px;
+    height: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding-left: 320px;
 }
+
 .grid-cell {
-    background-color: grey;
+
+    background-color: lightblue;
     border: 1px solid black;
     width: 50px;
     height: 50px;
-    display:inline-block;
+    display: inline-block;
     box-sizing: border-box;
   }
