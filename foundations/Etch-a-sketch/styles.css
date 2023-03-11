@@ -39,6 +39,17 @@ body{
     display: inline-block;
     box-sizing: border-box;
   }
-  button{
+  .refresh{
+    display: flex;
     justify-content: center;
+    text-decoration: none;
+  }
+  button{
+    text-decoration: none;
+    width: 150px;
+    height: 60px;
+    font-size: 24px;
+    font-family:cursive;
+    background-color: red;
+    color: black;
   }
