@@ -39,3 +39,6 @@ body{
     display: inline-block;
     box-sizing: border-box;
   }
+  button{
+    justify-content: center;
+  }
