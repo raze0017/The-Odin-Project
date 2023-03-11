@@ -18,6 +18,10 @@
       </div>
     </div> 
     <div class="result"></div>
+    <div class="containerbut">
+      <button id="Restartclass">Restart</button>
+    </div>
+    
     <div class="score">
       <div>Player: <span id="playerScore">0</span></div>
       <div>Computer: <span id="computerScore">0</span></div>
@@ -108,7 +112,13 @@
     matchdiv.textContent='Match end\n You Lost';
     document.body.append(matchdiv);
   }
-}
+} 
+document.getElementById("Restartclass").onclick = function() {
+  document.querySelectorAll(".result").forEach((el) => el.innerHTML = "");
+  document.getElementById("playerScore").innerHTML = "0";
+  document.getElementById("computerScore").innerHTML = "0";
+  document.querySelectorAll(".resultMain").forEach((el) => el.innerHTML = "");
+};
     </script>
   </body>
 </html>

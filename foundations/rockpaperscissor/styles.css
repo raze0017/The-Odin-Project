@@ -13,6 +13,14 @@ button, .score {
     background:none;
     bottom: 400px;
 }
+.containerbut{
+display: flex;
+justify-content: center;
+}
+#Restartclass{
+    color: red;
+    border: 2px solid rgb(209, 17, 17);
+}
 
 .container{
     display: flex;
@@ -61,7 +69,7 @@ button, .score {
     text-align: center;
     font-size: 2rem;
     font-family: cursive;
-    color: rgb(243, 54, 7);
+    color: rgb(16, 16, 16);
   }
 .result {
     position: fixed;
