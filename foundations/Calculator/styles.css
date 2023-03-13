@@ -13,7 +13,7 @@ body{
 .container{
     width: 300px;
     height: 500px;
-    border: 1px solid black;
+    border: 3px solid black;
     display: flex;
     flex-direction: column;
 }
@@ -36,4 +36,27 @@ body{
     width: 300px;
     height: 300px;
     border: 1px solid rgb(24, 24, 24);
+    
+    
+}
+
+button{
+    width: 75px;
+    height: 60px;
+    border: 1px solid black;
+    font-size: 25px;
+    background-color: rgb(10, 10, 10);
+    color: orange;
+}
+
+.firstrow,.secondrow,.thirdrow,.fourthrow,.mainrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.num{
+    background-color: rgb(43, 38, 38);
+    color:white;
+    font-size: 25px;
 }
