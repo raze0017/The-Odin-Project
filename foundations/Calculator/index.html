@@ -12,39 +12,42 @@
    <div class="container">
     <div class="adv">CAZIO<br>fx-991EX</div>
     <div class="display"></div>
+   <div class="answer"></div>
     <div class="numbers">
         <div class="mainrow">
-            <button id="c">c</button>
-            <button id="back"><</button>
-            <button id="%">%</button>
-            <button id="/">/</button>
+            <button id="c" onclick="cleardisplay()">c</button>
+            <button id="back" onclick="del()">del</button>
+            <button id="%" onclick="operate2()">%</button>
+            <button id="/" onclick="operate2()">/</button>
          </div>
         <div class="firstrow">
-            <button id="7" class="num">7</button>
-            <button id="8" class="num">8</button>
-            <button id="9" class="num">9</button>
-            <button id="X">x</button>
+            <button id="7" class="num" onclick="numberD()">7</button>
+            <button id="8" class="num" onclick="numberD()">8</button>
+            <button id="9" class="num" onclick="numberD()">9</button>
+            <button id="*" onclick="operate2()" >*</button>
          </div>
          <div class="secondrow">
-            <button id="4" class="num">4</button>
-            <button id="5" class="num">5</button>
-            <button id="6" class="num">6</button>
-            <button id="-">-</button>
+            <button id="4" class="num" onclick="numberD()">4</button>
+            <button id="5" class="num" onclick="numberD()">5</button>
+            <button id="6" class="num" onclick="numberD()">6</button>
+            <button id="-" onclick="operate2()">-</button>
          </div>
          <div class="thirdrow">
-            <button id="1" class="num">1</button>
-            <button id="2" class="num">2</button>
-            <button id="3" class="num">3</button>
-            <button id="+">+</button>
+            <button id="1" class="num" onclick="numberD()">1</button>
+            <button id="2" class="num" onclick="numberD()">2</button>
+            <button id="3" class="num" onclick="numberD()">3</button>
+            <button id="+" onclick="operate2()">+</button>
          </div>
          <div class="fourthrow">
             <button id="empty">,</button>
-            <button id="0">0</button>
+            <button id="0" onclick="numberD()">0</button>
             <button id="9">.</button>
-            <button id="equal">=</button>
+            <button id="equals" onclick="equals()">=</button>
          </div>
     </div>
    </div> 
+   <a href="https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en-US" style="text-decoration: none;"><div class="caution">Use dark mode</div></a>
+   
    <script src="script.js" defer></script>
 </body>
 </html>
